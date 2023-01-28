@@ -1,0 +1,17 @@
+[package]
+name = "shared_key_generator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hex = "0.4.3"
+hex-literal = "0.3.4"
+hkdf = "0.12.3"
+sha2 = "0.10.6"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
